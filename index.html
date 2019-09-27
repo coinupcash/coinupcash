@@ -1,0 +1,873 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all_nosearch.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;java&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="java">java</a>
+        </div>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#fa255f0ccc" class="toc-h1 toc-link" data-title="소개">소개</a>
+          </li>
+          <li>
+            <a href="#12d098af2f" class="toc-h1 toc-link" data-title="인증토큰 생성">인증토큰 생성</a>
+          </li>
+          <li>
+            <a href="#api" class="toc-h1 toc-link" data-title="지갑 API">지갑 API</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#5b7f20857e" class="toc-h2 toc-link" data-title="지갑 생성">지갑 생성</a>
+                  </li>
+                  <li>
+                    <a href="#gbizcoinup" class="toc-h2 toc-link" data-title="지갑 생성 (GBizCoinup용)">지갑 생성 (GBizCoinup용)</a>
+                  </li>
+                  <li>
+                    <a href="#4ff60b3981" class="toc-h2 toc-link" data-title="지갑 잔고 조회">지갑 잔고 조회</a>
+                  </li>
+                  <li>
+                    <a href="#c499221305" class="toc-h2 toc-link" data-title="트랜잭션 조회">트랜잭션 조회</a>
+                  </li>
+                  <li>
+                    <a href="#bc32edff34" class="toc-h2 toc-link" data-title="코인 차감 처리">코인 차감 처리</a>
+                  </li>
+                  <li>
+                    <a href="#d8af6c2112" class="toc-h2 toc-link" data-title="코인 차감 처리(다중 추천인)">코인 차감 처리(다중 추천인)</a>
+                  </li>
+                  <li>
+                    <a href="#6253d4bd91" class="toc-h2 toc-link" data-title="출금요청 처리">출금요청 처리</a>
+                  </li>
+                  <li>
+                    <a href="#76fab23294" class="toc-h2 toc-link" data-title="입금 정보 조회">입금 정보 조회</a>
+                  </li>
+                  <li>
+                    <a href="#92c05fc43e" class="toc-h2 toc-link" data-title="환율 정보 조회">환율 정보 조회</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+      </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='fa255f0ccc'>소개</h1>
+<p>소개 내용 블라브라 ~~</p>
+<h1 id='12d098af2f'>인증토큰 생성</h1>
+<blockquote>
+<p>인증토큰을 생성하기 위해 아래의 코드를 참조 :</p>
+</blockquote>
+<pre class="highlight java tab-java"><code>
+<span class="n">String</span> <span class="n">token</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">apiKey</span> <span class="o">=</span> <span class="s">"&lt;API_KEY&gt;"</span><span class="o">;</span>
+<span class="n">Algorithm</span> <span class="n">algorithm</span> <span class="o">=</span> <span class="n">Algorithm</span><span class="o">.</span><span class="na">HMAC256</span><span class="o">(</span><span class="n">apiKey</span><span class="o">);</span>
+
+<span class="k">if</span><span class="o">(</span><span class="n">query</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">token</span> <span class="o">=</span>  <span class="n">JWT</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+            <span class="o">.</span><span class="na">withClaim</span><span class="o">(</span><span class="s">"url"</span><span class="o">,</span> <span class="n">url</span><span class="o">)</span>
+            <span class="o">.</span><span class="na">withClaim</span><span class="o">(</span><span class="s">"nonce"</span><span class="o">,</span> <span class="k">new</span> <span class="n">Date</span><span class="o">().</span><span class="na">getTime</span><span class="o">())</span>
+            <span class="o">.</span><span class="na">sign</span><span class="o">(</span><span class="n">algorithm</span><span class="o">);</span>
+<span class="o">}</span>
+
+<span class="n">token</span> <span class="o">=</span> <span class="n">JWT</span><span class="o">.</span><span class="na">create</span><span class="o">()</span>
+          <span class="o">.</span><span class="na">withClaim</span><span class="o">(</span><span class="s">"url"</span><span class="o">,</span> <span class="n">url</span><span class="o">)</span>
+          <span class="o">.</span><span class="na">withClaim</span><span class="o">(</span><span class="s">"query"</span><span class="o">,</span> <span class="n">query</span><span class="o">)</span>
+          <span class="o">.</span><span class="na">withClaim</span><span class="o">(</span><span class="s">"nonce"</span><span class="o">,</span> <span class="k">new</span> <span class="n">Date</span><span class="o">().</span><span class="na">getTime</span><span class="o">())</span>
+          <span class="o">.</span><span class="na">sign</span><span class="o">(</span><span class="n">algorithm</span><span class="o">);</span>
+</code></pre>
+<blockquote>
+<p>Make sure to replace <code>API_KEY</code> with your API key.</p>
+</blockquote>
+
+<p>API 요청시 토큰을 생성하여 요청 헤더의 <code>X-Authorization</code> 의 값으로 설정하여 요청을 전송합니다. token 생성은 JWT(https://jwt.io) 형식을 따릅니다.</p>
+
+<p>아래의 모든 API를 호출시 토큰을 생성하여 아래와 같이 헤더에 설정하여 API를 호출해야 합니다. </p>
+
+<p><code>X-Authorization: &lt;token&gt;</code></p>
+
+<aside class="notice">
+토큰 생성시 위에 샘플코드에서  <code>API_KEY</code> 를 자신의 API 키로 수정하여 사용해야 합니다.
+</aside>
+<h1 id='api'>지갑 API</h1><h2 id='5b7f20857e'>지갑 생성</h2><pre class="highlight java tab-java"><code><span class="n">String</span> <span class="n">apiUrl</span> <span class="o">=</span> <span class="s">"/wallet/api/account"</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">password</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+<span class="n">JSONObject</span> <span class="n">param</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONObject</span><span class="o">();</span>
+<span class="n">param</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"password"</span><span class="o">,</span> <span class="n">password</span><span class="o">);</span>
+
+<span class="n">String</span> <span class="n">token</span> <span class="o">=</span> <span class="n">getJwtToken</span><span class="o">(</span><span class="n">apiUrl</span><span class="o">,</span><span class="n">param</span><span class="o">.</span><span class="na">toJSONString</span><span class="o">());</span>
+<span class="n">HttpHeaders</span> <span class="n">headers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpHeaders</span><span class="o">();</span>
+<span class="n">headers</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"X-Authorization"</span><span class="o">,</span> <span class="n">token</span><span class="o">);</span>
+<span class="n">headers</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"content-type"</span><span class="o">,</span> <span class="s">"application/json; charset=UTF-8"</span><span class="o">);</span>
+<span class="n">HttpEntity</span> <span class="n">requetEntity</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpEntity</span><span class="o">(</span><span class="n">param</span><span class="o">.</span><span class="na">toJSONString</span><span class="o">(),</span>
+                                         <span class="n">headers</span><span class="o">);</span>
+
+<span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">resultEntity</span> <span class="o">=</span> <span class="n">restTemplate</span><span class="o">.</span><span class="na">exchange</span><span class="o">(</span>
+                                        <span class="n">baseUrl</span> <span class="o">+</span> <span class="n">apiUrl</span><span class="o">,</span> 
+                                        <span class="n">HttpMethod</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span> 
+                                        <span class="n">equetEntity</span><span class="o">,</span> 
+                                        <span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+
+</code></pre>
+<blockquote>
+<p>샘플 결과 :</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xf8734f3498feok48a6afbdc1f6c32vlk05ac63ea"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>지갑 생성 후 지갑 주소를 반환한다.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>POST /wallet/api/account</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>파라미터</th>
+<th>필수여부</th>
+<th>설명</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>password</td>
+<td>true</td>
+<td>비밀번호</td>
+</tr>
+</tbody></table>
+<h2 id='gbizcoinup'>지갑 생성 (GBizCoinup용)</h2><pre class="highlight java tab-java"><code><span class="n">String</span> <span class="n">apiUrl</span> <span class="o">=</span> <span class="s">"/wallet/api/gbiz-account"</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">password</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+<span class="n">Integer</span> <span class="n">balance</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+<span class="n">JSONObject</span> <span class="n">param</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONObject</span><span class="o">();</span>
+<span class="n">param</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"password"</span><span class="o">,</span> <span class="n">password</span><span class="o">);</span>
+<span class="n">param</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"balance"</span><span class="o">,</span> <span class="n">balance</span><span class="o">);</span>
+
+<span class="n">String</span> <span class="n">token</span> <span class="o">=</span> <span class="n">getJwtToken</span><span class="o">(</span><span class="n">apiUrl</span><span class="o">,</span><span class="n">param</span><span class="o">.</span><span class="na">toJSONString</span><span class="o">());</span>
+<span class="n">HttpHeaders</span> <span class="n">headers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpHeaders</span><span class="o">();</span>
+<span class="n">headers</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"X-Authorization"</span><span class="o">,</span> <span class="n">token</span><span class="o">);</span>
+<span class="n">headers</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"content-type"</span><span class="o">,</span> <span class="s">"application/json; charset=UTF-8"</span><span class="o">);</span>
+<span class="n">HttpEntity</span> <span class="n">requetEntity</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpEntity</span><span class="o">(</span><span class="n">param</span><span class="o">.</span><span class="na">toJSONString</span><span class="o">(),</span>
+                                         <span class="n">headers</span><span class="o">);</span>
+
+<span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">resultEntity</span> <span class="o">=</span> <span class="n">restTemplate</span><span class="o">.</span><span class="na">exchange</span><span class="o">(</span>
+                                        <span class="n">baseUrl</span> <span class="o">+</span> <span class="n">apiUrl</span><span class="o">,</span> 
+                                        <span class="n">HttpMethod</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span> 
+                                        <span class="n">equetEntity</span><span class="o">,</span> 
+                                        <span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+
+</code></pre>
+<blockquote>
+<p>샘플 결과 :</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xf8734f3498feok48a6afbdc1f6c32vlk05ac63ea"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>지갑 생성 후 지갑 주소를 반환한다.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST /wallet/api/gbiz-account</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>파라미터</th>
+<th>필수여부</th>
+<th>설명</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>password</td>
+<td>true</td>
+<td>비밀번호</td>
+</tr>
+<tr>
+<td>balance</td>
+<td>true</td>
+<td>초기잔고</td>
+</tr>
+</tbody></table>
+<h2 id='4ff60b3981'>지갑 잔고 조회</h2><pre class="highlight java tab-java"><code><span class="n">String</span> <span class="n">accountId</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">apiUrl</span> <span class="o">=</span> <span class="s">"/wallet/api/account/"</span> <span class="o">+</span> <span class="n">accountId</span><span class="o">;</span>
+
+<span class="n">String</span> <span class="n">token</span> <span class="o">=</span> <span class="n">getJwtToken</span><span class="o">(</span><span class="n">apiUrl</span><span class="o">,</span><span class="kc">null</span><span class="o">);</span>
+<span class="n">HttpHeaders</span> <span class="n">headers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpHeaders</span><span class="o">();</span>
+<span class="n">headers</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"X-Authorization"</span><span class="o">,</span> <span class="n">token</span><span class="o">);</span>
+<span class="n">HttpEntity</span> <span class="n">requetEntity</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpEntity</span><span class="o">(</span><span class="n">headers</span><span class="o">);</span>
+
+<span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">resultEntity</span> <span class="o">=</span> <span class="n">restTemplate</span><span class="o">.</span><span class="na">exchange</span><span class="o">(</span>
+                                        <span class="n">baseUrl</span> <span class="o">+</span> <span class="n">apiUrl</span><span class="o">,</span> 
+                                        <span class="n">HttpMethod</span><span class="o">.</span><span class="na">GET</span><span class="o">,</span> 
+                                        <span class="n">equetEntity</span><span class="o">,</span> 
+                                        <span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</code></pre>
+<blockquote>
+<p>샘플 결과 :</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"balanceOfCuc"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"balanceOfEth"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"stateOfCuc"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"COMPLETE | PENDING"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>지갑의 잔고를 조회한다.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /wallet/api/account/&lt;accountId&gt;</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>파라미터</th>
+<th>설명</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>accountId</td>
+<td>지갑주소</td>
+</tr>
+</tbody></table>
+<h2 id='c499221305'>트랜잭션 조회</h2><pre class="highlight java tab-java"><code><span class="n">String</span> <span class="n">accountId</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">apiUrl</span> <span class="o">=</span> <span class="s">"/wallet/api/account/"</span> <span class="o">+</span> <span class="n">accountId</span> <span class="o">+</span> <span class="s">"/transfer"</span><span class="o">;</span>
+
+<span class="n">String</span> <span class="n">token</span> <span class="o">=</span> <span class="n">getJwtToken</span><span class="o">(</span><span class="n">apiUrl</span><span class="o">,</span><span class="kc">null</span><span class="o">);</span>
+<span class="n">HttpHeaders</span> <span class="n">headers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpHeaders</span><span class="o">();</span>
+<span class="n">headers</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"X-Authorization"</span><span class="o">,</span> <span class="n">token</span><span class="o">);</span>
+<span class="n">HttpEntity</span> <span class="n">requetEntity</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpEntity</span><span class="o">(</span><span class="n">headers</span><span class="o">);</span>
+
+<span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">resultEntity</span> <span class="o">=</span> <span class="n">restTemplate</span><span class="o">.</span><span class="na">exchange</span><span class="o">(</span>
+                                        <span class="n">baseUrl</span> <span class="o">+</span> <span class="n">apiUrl</span><span class="o">,</span> 
+                                        <span class="n">HttpMethod</span><span class="o">.</span><span class="na">GET</span><span class="o">,</span> 
+                                        <span class="n">equetEntity</span><span class="o">,</span> 
+                                        <span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</code></pre>
+<blockquote>
+<p>샘플 결과 :</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"totalCount"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"page"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pageSize"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"list"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"txHash"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"from"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"to"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"value"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"timestamp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>거래 내역을 조회한다.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET /wallet/api/account/&lt;accountId&gt;/transfer</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>파라미터</th>
+<th>설명</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>accountId</td>
+<td>지갑 주소</td>
+</tr>
+</tbody></table>
+<h2 id='bc32edff34'>코인 차감 처리</h2><pre class="highlight java tab-java"><code><span class="n">String</span> <span class="n">apiUrl</span> <span class="o">=</span> <span class="s">"/wallet/api/minus-coin"</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">accountId</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">recommenderId</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+<span class="n">Long</span> <span class="n">totalVal</span> <span class="o">=</span> <span class="mi">50</span><span class="o">;</span> 
+<span class="n">Long</span> <span class="n">recommenderVal</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span> 
+<span class="n">JSONObject</span> <span class="n">param</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONObject</span><span class="o">();</span>
+<span class="n">param</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"accountId"</span><span class="o">,</span> <span class="n">accountId</span><span class="o">);</span>
+<span class="n">param</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"recommenderId"</span><span class="o">,</span> <span class="n">recommenderId</span><span class="o">);</span>
+<span class="n">param</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"value"</span><span class="o">,</span> <span class="n">totalVal</span><span class="o">);</span>
+<span class="n">param</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"recommenderValue"</span><span class="o">,</span> <span class="n">recommenderVal</span><span class="o">);</span>
+
+<span class="n">String</span> <span class="n">token</span> <span class="o">=</span> <span class="n">getJwtToken</span><span class="o">(</span><span class="n">apiUrl</span><span class="o">,</span><span class="n">param</span><span class="o">.</span><span class="na">toJSONString</span><span class="o">());</span>
+<span class="n">HttpHeaders</span> <span class="n">headers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpHeaders</span><span class="o">();</span>
+<span class="n">headers</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"X-Authorization"</span><span class="o">,</span> <span class="n">token</span><span class="o">);</span>
+<span class="n">headers</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"content-type"</span><span class="o">,</span> <span class="s">"application/json; charset=UTF-8"</span><span class="o">);</span>
+<span class="n">HttpEntity</span> <span class="n">requetEntity</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpEntity</span><span class="o">(</span><span class="n">param</span><span class="o">.</span><span class="na">toJSONString</span><span class="o">(),</span>
+                                         <span class="n">headers</span><span class="o">);</span>
+
+<span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">resultEntity</span> <span class="o">=</span> <span class="n">restTemplate</span><span class="o">.</span><span class="na">exchange</span><span class="o">(</span>
+                                        <span class="n">baseUrl</span> <span class="o">+</span> <span class="n">apiUrl</span><span class="o">,</span> 
+                                        <span class="n">HttpMethod</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span> 
+                                        <span class="n">equetEntity</span><span class="o">,</span> 
+                                        <span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</code></pre>
+<blockquote>
+<p>샘플 결과 :</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"txHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"mWallet"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"0xflejfe~~~"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"usedCuc"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
+<p><code>POST /wallet/api/minus-coin</code></p>
+<h3 id='request-body-parameters'>Request Body Parameters</h3>
+<table><thead>
+<tr>
+<th>파라미터</th>
+<th>설명</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>accountId</td>
+<td>지갑 주소</td>
+</tr>
+<tr>
+<td>recommenderId</td>
+<td>추천인 지갑 주소</td>
+</tr>
+<tr>
+<td>value</td>
+<td>총 차감 CUC</td>
+</tr>
+<tr>
+<td>recommenderValue</td>
+<td>추천인 부여 CUC</td>
+</tr>
+</tbody></table>
+
+<p><code>
+{
+  &quot;accountId&quot;: &quot;string&quot;,
+  &quot;recommenderId&quot;: &quot;string&quot;,
+  &quot;totalValue&quot;: 0,
+  &quot;recommenderValue&quot;: 0</p>
+
+<p>}
+</code></p>
+<h2 id='d8af6c2112'>코인 차감 처리(다중 추천인)</h2><pre class="highlight java tab-java"><code><span class="n">String</span> <span class="n">apiUrl</span> <span class="o">=</span> <span class="s">"/wallet/api/minus-coins"</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">accountId</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+<span class="n">String</span> <span class="o">[]</span> <span class="n">recommenderIds</span> <span class="o">=</span> <span class="o">[</span><span class="s">""</span><span class="o">];</span>
+<span class="n">Long</span> <span class="n">totalVal</span> <span class="o">=</span> <span class="mi">50</span><span class="o">;</span> 
+<span class="n">Long</span> <span class="o">[]</span> <span class="n">recommenderVals</span> <span class="o">=</span> <span class="o">[</span><span class="mi">10</span><span class="o">];</span> 
+<span class="n">JSONObject</span> <span class="n">param</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONObject</span><span class="o">();</span>
+<span class="n">param</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"accountId"</span><span class="o">,</span> <span class="n">accountId</span><span class="o">);</span>
+<span class="n">param</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"recommenderIds"</span><span class="o">,</span> <span class="k">new</span> <span class="n">JSONArray</span><span class="o">(</span><span class="n">recommenderIds</span><span class="o">));</span>
+<span class="n">param</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"value"</span><span class="o">,</span> <span class="n">totalVal</span><span class="o">);</span>
+<span class="n">param</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"recommenderValue"</span><span class="o">,</span> <span class="k">new</span> <span class="n">JSONArray</span><span class="o">(</span><span class="n">recommenderVals</span><span class="o">));</span>
+
+<span class="n">String</span> <span class="n">token</span> <span class="o">=</span> <span class="n">getJwtToken</span><span class="o">(</span><span class="n">apiUrl</span><span class="o">,</span><span class="n">param</span><span class="o">.</span><span class="na">toJSONString</span><span class="o">());</span>
+<span class="n">HttpHeaders</span> <span class="n">headers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpHeaders</span><span class="o">();</span>
+<span class="n">headers</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"X-Authorization"</span><span class="o">,</span> <span class="n">token</span><span class="o">);</span>
+<span class="n">headers</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"content-type"</span><span class="o">,</span> <span class="s">"application/json; charset=UTF-8"</span><span class="o">);</span>
+<span class="n">HttpEntity</span> <span class="n">requetEntity</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpEntity</span><span class="o">(</span><span class="n">param</span><span class="o">.</span><span class="na">toJSONString</span><span class="o">(),</span>
+                                         <span class="n">headers</span><span class="o">);</span>
+
+<span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">resultEntity</span> <span class="o">=</span> <span class="n">restTemplate</span><span class="o">.</span><span class="na">exchange</span><span class="o">(</span>
+                                        <span class="n">baseUrl</span> <span class="o">+</span> <span class="n">apiUrl</span><span class="o">,</span> 
+                                        <span class="n">HttpMethod</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span> 
+                                        <span class="n">equetEntity</span><span class="o">,</span> 
+                                        <span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</code></pre>
+<blockquote>
+<p>샘플 결과 :</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"txHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"mWallet"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"0xflejfe~~~"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"usedCuc"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
+<p><code>POST /wallet/api/minus-coins</code></p>
+<h3 id='request-body-parameters-2'>Request Body Parameters</h3>
+<table><thead>
+<tr>
+<th>파라미터</th>
+<th>설명</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>accountId</td>
+<td>지갑 주소</td>
+</tr>
+<tr>
+<td>recommenderId</td>
+<td>추천인 지갑 주소</td>
+</tr>
+<tr>
+<td>value</td>
+<td>총 차감 CUC</td>
+</tr>
+<tr>
+<td>recommenderValue</td>
+<td>추천인 부여 CUC</td>
+</tr>
+</tbody></table>
+
+<p><code>
+{
+  &quot;accountId&quot;: &quot;string&quot;,
+  &quot;recommenderId&quot;: [&quot;string&quot;],
+  &quot;totalValue&quot;: 0,
+  &quot;recommenderValue&quot;: [0]</p>
+
+<p>}
+</code></p>
+<h2 id='6253d4bd91'>출금요청 처리</h2><pre class="highlight java tab-java"><code><span class="n">String</span> <span class="n">apiUrl</span> <span class="o">=</span> <span class="s">"/wallet/api/withdraw"</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">accountId</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">toWalletAddr</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+<span class="n">Long</span> <span class="n">val</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span> 
+<span class="n">JSONObject</span> <span class="n">param</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JSONObject</span><span class="o">();</span>
+<span class="n">param</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"from"</span><span class="o">,</span> <span class="n">accountId</span><span class="o">);</span>
+<span class="n">param</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"to"</span><span class="o">,</span> <span class="n">toWalletAddr</span><span class="o">);</span>
+<span class="n">param</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"value"</span><span class="o">,</span> <span class="n">val</span><span class="o">);</span>
+
+<span class="n">String</span> <span class="n">token</span> <span class="o">=</span> <span class="n">getJwtToken</span><span class="o">(</span><span class="n">apiUrl</span><span class="o">,</span><span class="n">param</span><span class="o">.</span><span class="na">toJSONString</span><span class="o">());</span>
+<span class="n">HttpHeaders</span> <span class="n">headers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpHeaders</span><span class="o">();</span>
+<span class="n">headers</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"X-Authorization"</span><span class="o">,</span> <span class="n">token</span><span class="o">);</span>
+<span class="n">headers</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"content-type"</span><span class="o">,</span> <span class="s">"application/json; charset=UTF-8"</span><span class="o">);</span>
+<span class="n">HttpEntity</span> <span class="n">requetEntity</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpEntity</span><span class="o">(</span><span class="n">param</span><span class="o">.</span><span class="na">toJSONString</span><span class="o">(),</span>
+                                         <span class="n">headers</span><span class="o">);</span>
+
+<span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">resultEntity</span> <span class="o">=</span> <span class="n">restTemplate</span><span class="o">.</span><span class="na">exchange</span><span class="o">(</span>
+                                        <span class="n">baseUrl</span> <span class="o">+</span> <span class="n">apiUrl</span><span class="o">,</span> 
+                                        <span class="n">HttpMethod</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span> 
+                                        <span class="n">equetEntity</span><span class="o">,</span> 
+                                        <span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</code></pre>
+<blockquote>
+<p>샘플 결과 :</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"txHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"string"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-7'>HTTP Request</h3>
+<p><code>POST /wallet/api/withdraw</code></p>
+<h3 id='request-body-parameters-3'>Request Body Parameters</h3>
+<table><thead>
+<tr>
+<th>파라미터</th>
+<th>설명</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>from</td>
+<td>보내는 사람 지갑 주소</td>
+</tr>
+<tr>
+<td>to</td>
+<td>받는 사람 지갑 주소</td>
+</tr>
+<tr>
+<td>value</td>
+<td>보낼 CUC 수량</td>
+</tr>
+</tbody></table>
+
+<p><code>
+{
+  &quot;from&quot;: &quot;string&quot;,
+  &quot;to&quot;: &quot;string&quot;,
+  &quot;value&quot;: 0
+}
+</code></p>
+<h2 id='76fab23294'>입금 정보 조회</h2><pre class="highlight java tab-java"><code><span class="n">String</span> <span class="n">latestTimestamp</span> <span class="o">=</span> <span class="s">""</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">apiUrl</span> <span class="o">=</span> <span class="s">"/wallet/api/deposit/transfer?latestTimestamp="</span><span class="o">+</span><span class="n">latestTimestamp</span><span class="o">;</span>
+
+
+<span class="n">String</span> <span class="n">token</span> <span class="o">=</span> <span class="n">getJwtToken</span><span class="o">(</span><span class="n">apiUrl</span><span class="o">,</span><span class="kc">null</span><span class="o">);</span>
+<span class="n">HttpHeaders</span> <span class="n">headers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpHeaders</span><span class="o">();</span>
+<span class="n">headers</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="s">"X-Authorization"</span><span class="o">,</span> <span class="n">token</span><span class="o">);</span>
+<span class="n">headers</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"content-type"</span><span class="o">,</span> <span class="s">"application/json; charset=UTF-8"</span><span class="o">);</span>
+<span class="n">HttpEntity</span> <span class="n">requetEntity</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpEntity</span><span class="o">(</span><span class="n">param</span><span class="o">.</span><span class="na">toJSONString</span><span class="o">(),</span>
+                                         <span class="n">headers</span><span class="o">);</span>
+
+<span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">resultEntity</span> <span class="o">=</span> <span class="n">restTemplate</span><span class="o">.</span><span class="na">exchange</span><span class="o">(</span>
+                                        <span class="n">baseUrl</span> <span class="o">+</span> <span class="n">apiUrl</span><span class="o">,</span> 
+                                        <span class="n">HttpMethod</span><span class="o">.</span><span class="na">GET</span><span class="o">,</span> 
+                                        <span class="n">equetEntity</span><span class="o">,</span> 
+                                        <span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</code></pre>
+<blockquote>
+<p>샘플 결과 :</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"txHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xf83fef65d9a437734d62fc7d9321e168203e7fb810b9dda76120c26b8c2908d2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DONE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xae6d2a7c11642c82243e859506fa5ecf4cda348a"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xef0a9fc19dd7b0dc3f24169ff85731e410e0bfaf"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1544960098"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"exchDoneTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1544960467"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"txHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x2f46d41f74ce75f6263be19e6f22aff64b8b3868cc43c6ef3359c08c2255de08"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DONE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xae6d2a7c11642c82243e859506fa5ecf4cda348a"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xef0a9fc19dd7b0dc3f24169ff85731e410e0bfaf"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1544960123"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"exchDoneTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1544960467"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"txHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x4c2891b0f682b130bedbbcbe409e2bb766e677c06d588d45d73e594f12160161"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DONE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xae6d2a7c11642c82243e859506fa5ecf4cda348a"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xef0a9fc19dd7b0dc3f24169ff85731e410e0bfaf"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1544960187"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"exchDoneTimestamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1544960534"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-8'>HTTP Request</h3>
+<p><code>GET /wallet/api/deposit/transfer?latestTimestamp=&lt;latestTimestamp&gt;</code></p>
+<h3 id='request-body-parameters-4'>Request Body Parameters</h3>
+<table><thead>
+<tr>
+<th>파라미터</th>
+<th>설명</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>latestTimestamp</td>
+<td>마지막 입금 정보의 타임스탬프 (데이터가 없을 경우 파라미터값을 제외)</td>
+</tr>
+</tbody></table>
+<h2 id='92c05fc43e'>환율 정보 조회</h2><pre class="highlight java tab-java"><code><span class="n">String</span> <span class="n">apiUrl</span> <span class="o">=</span> <span class="s">"/wallet/api/exchange/rate;
+
+
+String token = getJwtToken(apiUrl,null);
+HttpHeaders headers = new HttpHeaders();
+headers.set("</span><span class="n">X</span><span class="o">-</span><span class="n">Authorization</span><span class="s">", token);
+headers.add("</span><span class="n">content</span><span class="o">-</span><span class="n">type</span><span class="s">", "</span><span class="n">application</span><span class="o">/</span><span class="n">json</span><span class="o">;</span> <span class="n">charset</span><span class="o">=</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="err">"</span><span class="o">);</span>
+<span class="n">HttpEntity</span> <span class="n">requetEntity</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HttpEntity</span><span class="o">(</span><span class="n">param</span><span class="o">.</span><span class="na">toJSONString</span><span class="o">(),</span>
+                                         <span class="n">headers</span><span class="o">);</span>
+
+<span class="n">ResponseEntity</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">resultEntity</span> <span class="o">=</span> <span class="n">restTemplate</span><span class="o">.</span><span class="na">exchange</span><span class="o">(</span>
+                                        <span class="n">baseUrl</span> <span class="o">+</span> <span class="n">apiUrl</span><span class="o">,</span> 
+                                        <span class="n">HttpMethod</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span> 
+                                        <span class="n">equetEntity</span><span class="o">,</span> 
+                                        <span class="n">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</code></pre>
+<blockquote>
+<p>샘플 결과 :</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"200"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OK"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"exchangeRate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00026"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"exchangeRateEthCuc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00026"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"exchangeRateKrwCuc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.3"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"lastUpdate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-06-21 10:12:31"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-9'>HTTP Request</h3>
+<p><code>POST /wallet/api/exchange/rate;</code></p>
+<h3 id='request-body-parameters-5'>Request Body Parameters</h3>
+<table><thead>
+<tr>
+<th>파라미터</th>
+<th>설명</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id='errors'>Errors</h1>
+<aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
+
+<p>The Kittn API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request is invalid.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified kitten could not be found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The kitten requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="java">java</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
